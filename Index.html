@@ -1,16 +1,24 @@
 <!doctype HTML>
 <html>
+<head>
+	<title>
+		Ar-model
+	</title>
+<meta name="description" content="AR-model">
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src=”https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs>
-  	<a-marker preset="hiro">
- 
+    
+    <a-assets>
+      <a-asset-item id="airplane_asset_mtl" src="https://raw.githubusercontent.com/prashant-andani/AR-Alphabets-words/master/assets/airplane/FREOBJ.mtl"></a-asset-item>
+      <a-asset-item id="airplane_asset_obj" src="https://raw.githubusercontent.com/prashant-andani/AR-Alphabets-words/master/assets/airplane/FREOBJ.obj"></a-asset-item>
+    </a-assets>
 
-            <a-entity obj-model="src: url(/Model/ball.obj);" scale="0.1 0.1 0.1"></a-entity>
-
-  	</a-marker>
-  	<a-entity camera></a-entity>
+  	  	<a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
   </body>
 </html>
